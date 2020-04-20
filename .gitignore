@@ -126,3 +126,8 @@ dmypy.json
 
 URLNet/
 data/
+
+# They are not a part of the code itself, they are more similar to `build artifacts':
+plots/
+models/full_convolution/
+models/checkpoints/
