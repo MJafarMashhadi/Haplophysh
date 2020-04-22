@@ -6,13 +6,21 @@ Experimenting with some convolutional and recurrent neural net architectures wit
 detect phishing URLs. This is the project I did for Network Security course in winter 2020.
 
 ### What did you learn?
-First thing I learned is that it works. Phishing pages DO give themselves away in their URLs alone. 
+First thing I learned is that *it works*. Phishing pages DO give themselves away in their URLs alone. 
 
-Also I learned how important it is that the model size (number of trainable parameters for example) and the data set
-size to be proportionate. The model I had that combined character level and word level embeddings is almost the same 
-architecture that URLNet proposed but it is way smaller because my data set size was smaller in orders of magnitude.
+Also I learned how important it is that the model size (number of trainable parameters / its learning capacity) and the data set size to be proportionate. One of the models that combines character level and word level embeddings is almost the same 
+architecture that URLNet proposed but it is way smaller because my data volume was orders of magnitude smaller. It still manages to perform pretty well sometimes surpassing URLNet.
 
-There are many things to learn doing such a project, these two were the highlights for me. 
+These two were the highlights for me but there are many things to learn doing such a project, listed below. I had already learned many of them while doing my Masters' thesis; yet it is worth mentioning that these can be other take aways of this project. If any one wants to see some examples of how to do these things in Keras and TensorFlow 2 they can take a look at this repository!
+
+- How embeddings word
+- How to deal with 1-D convolutions for sequence processing
+- How to use LSTM/GRU recurrent layers for sequence processing
+- How to tune the hyper parameters such as the layer sizes or batch size
+- How to get the most out of the GPU in training
+- How to use dataset generators to deal with larger datasets more easily
+- How to deal with model architectures with multiple inputs
+
 
 ### Where to get the data from?
 If you want to do a big research on it you'd be better off to collaborate with a large corporation or security group. 
@@ -25,9 +33,7 @@ But if it is not possible for your situation I'd recommend these data sources wh
 - [This UCI data set](http://archive.ics.uci.edu/ml/datasets/URL+Reputation)
 
 
-I cannot share them on github. They get out of date quickly (in a matter of hours!). For now I have no plans for 
-keeping this repository up to date in long term. There won't be any point in mirroring them in a repository too, most of them are publically available anyways. 
-Also, I ,ight not have the permission to share some of them (I'm sure about the first one; redistribution is a no no). 
+I cannot share them on github. First because they get out of date quickly (in a matter of hours!). There won't be any point in mirroring them in a repository too, most of them are publically available. Also, I ,ight not have the permission to share some of them (I'm sure about the first one; redistribution is a no no). And at last, for now I have no plans for keeping this repository up to date in long term. 
 
 
 ### Related Work
