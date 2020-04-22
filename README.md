@@ -8,9 +8,9 @@ detect phishing URLs. This is the project I did for Network Security course in w
 ### What did you learn?
 First thing I learned is that it works. Phishing pages DO give themselves away in their URLs alone. 
 
-Also I learned how important it is to that the model size (number of trainable parameters for example) and the data set
-size should be proportionate. The model I had that combined character level and word level embeddings is almost the same 
-architecture that URLNet proposed but it is way smaller. 
+Also I learned how important it is that the model size (number of trainable parameters for example) and the data set
+size to be proportionate. The model I had that combined character level and word level embeddings is almost the same 
+architecture that URLNet proposed but it is way smaller because my data set size was smaller in orders of magnitude.
 
 There are many things to learn doing such a project, these two were the highlights for me. 
 
@@ -47,4 +47,3 @@ Sorry, I do. I was just lazy here, don't judge.
 
 *Are you publishing it?*
 I don't know. I wrote a 10 page conference paper as a deliverable for the course, but it needs more work before being ready for publication.
- 
