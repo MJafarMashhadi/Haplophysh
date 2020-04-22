@@ -14,8 +14,8 @@ def map_text(X):
     return X
 
 
-def load_and_clean(*, save_to=None, random_state=42, malware_url_samples=50000):
-    data = pd.concat([
+def load_and_clean(*, save_to=None, random_state=42, malware_url_samples=50000, extended=False):
+    data_sets = [
         pd.read_csv('../data/mixed.csv', index_col=False),
         pd.DataFrame({
             'url': ['http://' + map_text(X) for X in open('../data/MalwareURLExport.csv', 'r').readlines()],
@@ -26,7 +26,24 @@ def load_and_clean(*, save_to=None, random_state=42, malware_url_samples=50000):
             random_state=random_state
         ),
         pd.read_csv('../data/kaggle_data_clean.csv', index_col=0).reset_index(drop=True)
-    ]).drop_duplicates(subset=['url'])
+    ]
+    if extended:
+        for file_name in (
+                '../data/FinalDataset/URL/spam_dataset.csv',
+                '../data/FinalDataset/URL/Malware_dataset.csv'
+        ):
+            extended_df = pd.DataFrame({
+                'url': [*map(map_text, open(file_name, 'r').readlines())],
+                'type': 1
+            }).reset_index(drop=True)
+            extended_df = extended_df.sample(
+                n=min(malware_url_samples, extended_df.shape[0]),
+                replace=False,
+                random_state=random_state
+            )
+            data_sets.append(extended_df)
+
+    data = pd.concat(data_sets).drop_duplicates(subset=['url'])
     if save_to is not None:
         data.to_csv(save_to, index=False)
 
