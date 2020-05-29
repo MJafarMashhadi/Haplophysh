@@ -3,7 +3,7 @@ Haplophysh
 
 ### What is it?
 Experimenting with some convolutional and recurrent neural net architectures with word and character embeddings to 
-detect phishing URLs. This is the project I did for Network Security course in winter 2020.
+detect phishing URLs. This is the project I did for Network Security course in winter 2020. You can check out a one-page extended abstract which summarises the key points of this project [here](ExtendedAbstract.pdf).
 
 ### What did you learn?
 First thing I learned is that *it works*. Phishing pages DO give themselves away in their URLs alone. 
@@ -11,7 +11,7 @@ First thing I learned is that *it works*. Phishing pages DO give themselves away
 Also I learned how important it is that the model size (number of trainable parameters / its learning capacity) and the data set size to be proportionate. One of the models that combines character level and word level embeddings is almost the same 
 architecture that URLNet proposed but it is way smaller because my data volume was orders of magnitude smaller. It still manages to perform pretty well sometimes surpassing URLNet.
 
-These two were the highlights for me but there are many things to learn doing such a project, listed below. I had already learned many of them while doing my Masters' thesis; yet it is worth mentioning that these can be other take aways of this project. If any one wants to see some examples of how to do these things in Keras and TensorFlow 2 they can take a look at this repository!
+These two were the highlights for me but there are many things to learn doing such a project, listed below. I had already learned many of them while doing my Masters' thesis; yet it is worth mentioning that these can be other take aways of this project. If anyone wants to see some examples of how to do these things in Keras and TensorFlow 2 they can take a look at this repository!
 
 - How embeddings word
 - How to deal with 1-D convolutions for sequence processing
@@ -33,7 +33,7 @@ But if it is not possible for your situation I'd recommend these data sources wh
 - [This UCI data set](http://archive.ics.uci.edu/ml/datasets/URL+Reputation)
 
 
-I cannot share them on github. First because they get out of date quickly (in a matter of hours!). There won't be any point in mirroring them in a repository too, most of them are publically available. Also, I ,ight not have the permission to share some of them (I'm sure about the first one; redistribution is a no no). And at last, for now I have no plans for keeping this repository up to date in long term. 
+I cannot share them on github. First because they get out of date quickly (in a matter of hours!). Second, there won't be any point in mirroring them in a repository too, most of them are publically available. Also, I might not have the permission to share some of them (I'm sure about the first one; redistribution is a no no). And at last, for now I have no plans for keeping this repository up to date in long term; I have completed a project and had my take-aways, I'm done with it for now. 
 
 
 ### Related Work
@@ -52,4 +52,7 @@ It's a dull play on words. Haplophryne is an \[ugly\] fish living in deep ocean.
 Sorry, I do. I was just lazy here, don't judge.  
 
 *Are you publishing it?*
-I don't know. I wrote a 10 page conference paper as a deliverable for the course, but it needs more work before being ready for publication.
+I don't know. I wrote a 10 page conference paper as a deliverable for the course, but it needs more work before being ready for publication. A summary of that paper, as an extended abstract, is now available [here](ExtendedAbstract.pdf).
+
+*I read the abstract, who is "We" exactly?*
+I did the project by myself. I used "we" throught the paper and the EA out of habit.
